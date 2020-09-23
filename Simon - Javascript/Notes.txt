@@ -1,0 +1,55 @@
+Simon Notes
+
+
+Create array to store the sequence.
+
+The first item in the sequence is added by the player when a square is clicked on.
+
+Each square will be assigned an integer value, starting from the green square and going counter clockwise.
+
+Green = 1
+Red = 2
+Yellow = 3
+Blue = 4
+
+These will make it easier to keep track. I may be able to just use the classes instead, will look into it later.
+
+Make it so that after one item is added to the array (which can only happen after the game has started) the gameheader changes to something else.
+When the player loses, make the text change to Game Over (make a gameOver() function)
+
+1. Make a listener for clicks. DONE!
+2. Make a method to add the class and sound (then remove the class). Half Done (no sound yet. I'll probably record real simon sounds with OBS and then chop them up with VLC or something. Fuck it.)
+2a. Maybe find a way to make the animation happen without the class. Can't do it yet. Will look into this later.
+3. Make it so that when the player clicks the icon, it's added to the array
+4. Make it so that after one item is added, the rest are added randomly (after the first item is added, have the system wait 1-2 seconds and then add the next one, then wait for the user to get it.
+5. Make it so that when the player loses, the background turns red and the header changes text to reflect as such. 
+6. Optional: make it so that a button appears to reset the page
+
+Steps for game:
+
+1: The player clicks on the square, attempting to add it to the array.
+2: The game checks the value of the square against the array value for a match. 
+3a: If it matches, it repeats the process again until the end of the array has been reached.
+3b: If it doesn't match, it runs the gameOver function, turns the background red, and changes the header to tell the player the've lost.
+4: Once the last item has been successfully inputted, the game will clear the player's array,
+play the sequence and add a new item to the array and wait for the player.
+
+-----
+
+Flash effect: This is tied to a class: .flash
+
+I've tied the keyframes for the class. All that I need to do is make it so that the class is added to the appropriate section via js when needed.
+
+js code to do so (used the greensquare as an example): document.querySelector(".greenSquare").classList.add("flash");
+Note: be sure to remove the class after half a second to allow it to flash again, as it 
+won't flash again if the class is still present and we add the class again
+
+-----
+
+To do:
+
+--------
+
+Here's an example of a very talented coder attempting the same project (albeit with a radically different approach): 
+https://medium.com/front-end-weekly/create-simon-game-in-javascript-d53b474a7416
+

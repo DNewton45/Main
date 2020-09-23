@@ -1,0 +1,171 @@
+body {
+  background: #040241;
+  text-align: center;
+}
+
+.gameHeader {
+  padding-top: 50px;
+  color: #b8aa00;
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.gameHeader:active {
+  -webkit-animation: flash linear 1s infinite;
+  animation: flash linear 1s infinite;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.gameContainer {
+  display: block;
+  margin: auto;
+  padding-top: 30px;
+  width: 50%;
+}
+
+.greenSquare {
+  background-color: green;
+  display: inline-block;
+  margin: 25px;
+  height: 200px;
+  width: 200px;
+  border: 10px;
+  border-style: solid;
+  border-radius: 20%;
+}
+
+.redSquare {
+  background-color: red;
+  display: inline-block;
+  margin: 25px;
+  height: 200px;
+  width: 200px;
+  border: 10px;
+  border-style: solid;
+  border-radius: 20%;
+}
+
+.yellowSquare {
+  background-color: yellow;
+  display: inline-block;
+  margin: 25px;
+  height: 200px;
+  width: 200px;
+  border: 10px;
+  border-style: solid;
+  border-radius: 20%;
+}
+
+.blueSquare {
+  background-color: blue;
+  display: inline-block;
+  margin: 25px;
+  height: 200px;
+  width: 200px;
+  border: 10px;
+  border-style: solid;
+  border-radius: 20%;
+}
+
+/* Flash and pulse code */
+/* Flash class and keyframe animation */
+.flashit {
+  -webkit-animation: flash linear 1s infinite;
+  animation: flash linear 1s infinite;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Pulse class and keyframe animation borrowed from codepen */
+.pulseit {
+  -webkit-animation: pulse linear .5s infinite;
+  animation: pulse linear .5s infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    width: 200px;
+  }
+
+  50% {
+    width: 340px;
+  }
+
+  100% {
+    width: 200px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    width: 200px;
+  }
+
+  50% {
+    width: 340px;
+  }
+
+  100% {
+    width: 200px;
+  }
+}
+
+.gameOverScreen {
+  background-color: red;
+  -webkit-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
+}
+
+/* Use this one to flash objects */
+.flash {
+  -webkit-animation: flash .5s 0s;
+  animation: flash .5s 0s;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
